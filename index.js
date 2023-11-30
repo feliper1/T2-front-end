@@ -2,7 +2,7 @@ const axios = require('axios');
 
 // Função para obter coordenadas a partir do nome da cidade
 async function getCoordinates(cityName) {
-    const apiKey = 'ef0b0973b783e0614ac87612ec04344b'; // Substitua pelo seu próprio chave da API
+    const apiKey = 'ef0b0973b783e0614ac87612ec04344b'; 
     const geocodingApiUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`;
 
     try {
@@ -17,7 +17,7 @@ async function getCoordinates(cityName) {
 
 // Função para obter condições climáticas atuais a partir das coordenadas
 async function getCurrentWeather(latitude, longitude) {
-    const apiKey = 'ef0b0973b783e0614ac87612ec04344b'; // Substitua pelo seu próprio chave da API
+    const apiKey = 'ef0b0973b783e0614ac87612ec04344b';
     const currentWeatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
 
     try {
@@ -35,7 +35,7 @@ async function getCurrentWeather(latitude, longitude) {
 
 // Exemplo de uso
 async function main() {
-    const cityName = 'São Paulo'; // Substitua pelo nome da cidade desejada
+    const cityName = 'São Paulo'; 
     try {
         const coordinates = await getCoordinates(cityName);
         console.log('Coordenadas:', coordinates);
